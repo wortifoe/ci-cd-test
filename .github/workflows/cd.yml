@@ -19,15 +19,14 @@ jobs:
       run: yarn install && yarn build
 
     - name: Deploy using SSH
-      uses: appleboy/ssh-action@v1.0.3
+      uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.PRIVATE_KEY }}
         port: 22
         script: |
-          cd /root/apps/ci-cd-test
+          cd ~/apps/ci-cd-test
           git pull origin main
-          yarn install
-          yarn build
+          yarn
           pm2 restart my-react-app
