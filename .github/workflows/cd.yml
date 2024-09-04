@@ -28,6 +28,5 @@ jobs:
         script: |
           cd ~/root/apps/ci-cd-test
           git pull origin main
-          yarn install
-          yarn build
+          yarn
           pm2 restart my-react-app
