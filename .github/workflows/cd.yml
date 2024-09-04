@@ -26,7 +26,7 @@ jobs:
         key: ${{ secrets.PRIVATE_KEY }}
         port: 22
         script: |
-          cd /root/apps/ci-cd-test
+          cd ~/root/apps/ci-cd-test
           git pull origin main
           yarn install
           yarn build
