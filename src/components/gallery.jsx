@@ -15,9 +15,9 @@ export const Gallery = (props) => {
         <div className="row">
           <div className="portfolio-items">
             {props.data
-              // ? props.data.map((d, i) => (
-              //     <div
-              //       key={`${d.title}-${i}`}
+              ? props.data.map((d, i) => (
+                  <div
+                    key={`${d.title}-${i}`}
                     className="col-sm-6 col-md-4 col-lg-4"
                   >
                     <Image
